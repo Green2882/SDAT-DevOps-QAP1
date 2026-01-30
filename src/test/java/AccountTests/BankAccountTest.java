@@ -31,13 +31,13 @@ public class BankAccountTest {
     }
 
     @Test
-    public void testBankAccountWithdrawInsufficientFunds(){
+    public void testBankAccountWithdrawInsufficientFunds() {
         BankAccount bankAccount = new BankAccount();
-        bankAccount.setFirstName("Test");
-        bankAccount.setLastName("Test");
-        bankAccount.setAccountNumber("Test");
         bankAccount.setBalance(500);
 
-        Assertions.assertFalse(bankAccount.withdraw(600));
+        boolean result = bankAccount.withdraw(600);
+
+        Assertions.assertFalse(result);
     }
+
 }
