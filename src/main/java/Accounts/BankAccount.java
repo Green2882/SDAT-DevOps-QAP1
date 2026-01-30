@@ -57,8 +57,11 @@ public class BankAccount {
         return balance;
     }
 
-    public double withdraw(double amount) {
+    public boolean withdraw(double amount) {
+        if(balance < amount){
+           return false;
+        }
         balance -= amount;
-        return balance;
+        return true;
     }
 }
