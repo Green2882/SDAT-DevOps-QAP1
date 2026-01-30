@@ -29,4 +29,15 @@ public class BankAccountTest {
 
         Assertions.assertEquals(500, bankAccount.getBalance());
     }
+
+    @Test
+    public void testBankAccountWithdrawInsufficientFunds() {
+        BankAccount bankAccount = new BankAccount();
+        bankAccount.setBalance(500);
+
+        boolean result = bankAccount.withdraw(600);
+
+        Assertions.assertFalse(result);
+    }
+
 }
