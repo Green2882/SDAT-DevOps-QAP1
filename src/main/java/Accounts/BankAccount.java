@@ -64,4 +64,8 @@ public class BankAccount {
         balance -= amount;
         return true;
     }
+
+    public void balanceInquiry() {
+        System.out.printf("Your current balance is: $%.2f%n", getBalance());
+    }
 }
